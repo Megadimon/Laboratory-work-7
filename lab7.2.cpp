@@ -16,7 +16,7 @@ int main(void)
 {
 	char txt[50];
 
-	setlocale(LC_CTYPE, "rus"); 
+	
 	ifstream fin("C:\\cpp\\baumanclasses\\labs\\lab7\\text.txt");
 	if(!fin.is_open()) cout << "Error: File was not found!" << endl;
 		else 
