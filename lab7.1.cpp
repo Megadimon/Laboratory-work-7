@@ -25,12 +25,12 @@ int main(void)
 	unsigned int size1 = 0;
 	unsigned int size2 = 0;
 	unsigned int n; 
-	setlocale(LC_CTYPE, "rus");
+	//setlocale(LC_CTYPE, "rus");
 	COMPUTER *pComputer; 
 	cout << " The number of array elements: ";
 	cin >> n;
 	pComputer = new COMPUTER[n]; 
-	for (int i = 0; i<n; i++) 
+	for (unsigned int i = 0; i<n; ++i) 
 		{ 
 		cout << " Computer: " << i+1 << endl;
 		cout << " Processor type: "; 
@@ -54,7 +54,7 @@ int main(void)
 		}
 	
 	ofstream fout("C:\\cpp\\baumanclasses\\labs\\lab7\\text.txt", ios_base::app); 
-    for (int i = 0; i<n; i++ ) 
+    for (unsigned int i = 0; i<n; ++i) 
     {
     	fout << "Computer " << i+1 << endl << " Type of processor: " << pComputer[i].ptype << endl;
     	fout << " Clock frequency: "<< pComputer[i].freq << endl;
@@ -65,7 +65,7 @@ int main(void)
 
     fout.close();
 	fflush(stdin);
-	free(pComputer);
+	delete [] pComputer;
 
 		cout << endl << endl << "Press any button to exit the program" << endl;
 	_getch();
