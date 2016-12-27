@@ -25,7 +25,6 @@ int main(void)
 	unsigned int size1 = 0;
 	unsigned int size2 = 0;
 	unsigned int n; 
-	//setlocale(LC_CTYPE, "rus");
 	COMPUTER *pComputer; 
 	cout << " The number of array elements: ";
 	cin >> n;
